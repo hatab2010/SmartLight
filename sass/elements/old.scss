@@ -1,0 +1,107 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@font-face {
+    font-family: HelveticaNeueCyr-Bold;
+    src: url(../fonts/HelveticaNeueCyr-Bold.ttf);
+}
+body{
+    background-color: black;
+    margin: 0;
+}
+.slide {
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slide > a {
+    text-decoration: none;
+    color: white;
+    font-size: 440%;
+    font-weight: bold;
+    pointer-events: none;
+    font-family: ElMessiriBold;
+    text-shadow: -0 -2px 0 #000000, 0 -2px 0 #000000, -0 2px 0 #000000, 0 2px 0 #000000, -2px -0 0 #000000, 2px -0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+} 
+
+.current > a {
+    color: white;
+    pointer-events: all; 
+}
+
+#carousel {
+    float: left;
+    overflow: hidden;
+    width: 60%;
+}
+
+#carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+#carousel {
+    overflow: hidden;
+    z-index: 9999;
+}
+
+#flip-container {
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+#flip-container > div {
+    background-color: black;
+    height: 80%;
+    width: 10%;
+}
+
+.front {
+    height: 200px;
+    width: 300px;
+}
+
+.back {
+    width: 300px;
+    height: 200px;
+}
+
+#card {
+    top: 10%;
+    right: 10%;
+    width: 60%;
+    height: 80%;
+    z-index: -9;
+}
+
+#card > div > div {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+#slideShow {
+    opacity: 0;
+    position: absolute;
+}
+ 
+.headImg {
+    background-image: url(images/_DSC1420.jpg);
+    width: 50%;
+    height: 50%;
+    top: 10%;
+    left: 25%;
+    position: absolute;
+}
+
+.head-container {
+    background-image: url(../images/slideContacts.png);
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    position: absolute;
+}
+  

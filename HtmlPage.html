@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <title></title>
+</head>
+<body>
+<style>
+    .front {
+        background-color: aqua;
+        height: 200px;
+        width: 300px;
+    }
+    .back {
+        background-color: black;
+        width: 300px;
+        height: 200px;
+    }
+    #card {
+        height: 200px;
+    }
+</style>
+<script>
+    window.onload = function() {
+        $("#card").flip({
+            axis: "x"
+        });
+    }
+    
+</script>
+<div id="card">
+    <div class="front">
+        <div style="background-image: url(images/_DSC1420.jpg)">
+            <span style="color: white; font-size: 30px">
+                5
+            </span>
+        </div>
+    </div>
+    <div class="back">
+        <div style="background-image: url(images/_DSC1420.jpg)">
+            <span style="color: white; font-size: 30px">
+                5
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

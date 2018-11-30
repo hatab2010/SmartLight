@@ -1,0 +1,112 @@
+﻿ @import url('https://fonts.googleapis.com/css?family=Roboto');
+ body {
+     font-family: 'Roboto', sans-serif;
+     margin: 0;
+     overflow: hidden;
+     background-color: black;
+     color: white;
+ }
+    
+ .slide {
+     font-weight: 800;
+     text-align: center;
+     text-transform: uppercase;
+     cursor: pointer;
+ }
+
+ .slide > a {
+     text-decoration: none;
+     color: white;
+     font-size: 26pt;
+     font-weight: bold;
+     pointer-events: none;
+ }
+
+.current > a {
+    color: blue;
+    font-size: 30pt;
+    pointer-events: all;
+}
+
+ #carousel {
+     float: left;
+     overflow: hidden;
+     width: 50%;
+ }
+
+ #carousel-wrapper {
+     overflow: hidden;
+     width: 100%;
+ }
+
+ #carousel {
+      overflow: hidden;
+     z-index: 9999;
+ }
+
+ #flip-container {
+     position: absolute;
+     right: 0;
+     width: 50%;
+ }
+    
+ #flip-container > div {
+     background-color: black;
+     height: 80%;
+     width: 10%;
+ }
+
+ .front {
+     height: 200px;
+     width: 300px;
+ }
+
+ .back {
+     width: 300px;
+     height: 200px;
+ }
+
+ #card {
+     top: 10%;
+     right: 10%;
+     width: 50%;
+     height: 80%;
+     z-index: -9;
+ }
+
+ #card > div > div {
+     width: 100%;
+     height: 100%;
+ }
+
+ #slideShow {
+     opacity: 0;
+     position: absolute;
+ }
+
+.headImg {
+    background-image: url(images/_DSC1420.jpg);
+    width: 50%;
+    height: 50%;
+    top: 10%;
+    left: 25%;
+    position: absolute;
+}
+ .head-container {
+     background-image: url(../images/_DSC1420.jpg);
+     width: 50%;
+     height: 80%;
+     top: 10%;
+     left: 25%;
+     position: absolute;
+ }
+
+ #menu {
+     width: 50px;
+     height: 50px;
+     -ms-border-radius: 25px;
+     border-radius: 25px;
+     background-color: white;
+     position: absolute;
+     z-index: 99999999999999;
+ }

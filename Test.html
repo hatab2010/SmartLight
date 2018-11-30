@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <title></title>
+</head>
+<style>
+    .btn {
+        position: absolute;
+        overflow: visible;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
+    body {
+        background-color: black;
+    }
+    .button {
+
+    }
+
+    .link {
+        padding: 15px 28px;
+        position: relative;
+        font-family: futura-pt,sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        display: inline-block;
+        border: 0 none;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        z-index: 1;
+        overflow: visible;
+    }
+
+    svg.btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1px;
+        height: 100%;
+        width: 100%;
+        overflow: visible;
+        z-index: -1;
+    }
+
+    .btn >.background {
+        fill: rgba(0,32,64,.1);
+    }
+</style>
+<body>
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
+    <defs>
+        <linearGradient id="border-blue" x1="0" y1="0" x2="0" y2="1" spreadMethod="pad">
+            <stop offset="0%" stop-color="#47aeea" />
+            <stop offset="100%" stop-color="#20588a" />
+        </linearGradient>
+        <filter id="glow-blue" x="-40%" y="-40%" width="180%" height="180%">
+            <feColorMatrix type="matrix" values="0 0 0 0   0
+           0 0.78 0 0   0
+           0 0 1 0   0
+           0 0 0 1 0" />
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+            <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+</svg>
+<style>
+    svg  {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+    <a class="link" type="button" theme="blue">
+        Discover the show
+        <svg class="btn">
+            <defs>
+                <linearGradient id="light-683974834" x1="1.000" y1="0.000" x2="1.206" y2="0.465" spreadMethod="pad">
+                    <stop offset="90%" stop-color="#91cff2" stop-opacity="0"></stop>
+                    <stop offset="100%" stop-color="#91cff2" stop-opacity="1"></stop>
+                </linearGradient>
+                <radialGradient id="lightCircle1" cx="1" cy="1" r="0.5">
+                    <stop offset="90%" stop-color="#91cff2" stop-opacity="1"></stop>
+                    <stop offset="100%" stop-color="#91cff2" stop-opacity="0"></stop>
+                </radialGradient>
+            </defs>
+            <rect class="background" width="100%" height="100%" rx="10" ry="10"></rect>
+            <g filter="url(#glow-blue)">
+                <rect class="border" width="100%" height="100%" rx="10" ry="10" fill="transparent" stroke="url(#border-blue)" stroke-width="1"></rect>
+                <rect class="light" width="100%" height="100%" rx="10" ry="10" fill="transparent" stroke="url(#lightCircle1)" stroke-width="2" opacity="0.72"></rect>
+            </g>
+            <g filter="url(#glow-blue)">
+                <text x="50%" y="50%" dy=".25em"
+                      text-anchor="middle"
+                      stroke-width="1"
+                      font-size ="50pt"
+                      stroke="url(#lightCircle1)">Text</text>
+            </g>
+            <g>
+                <text x="50%" y="50%" dy=".25em"
+                      text-anchor="middle"
+                      font-size ="50pt"
+                      fill="url(#border-blue)">Text</text>
+            </g>
+            <g>
+                <text x="50%" y="50%" dy=".25em"
+                      text-anchor="middle"
+                      font-size ="50pt"
+                      fill="url(#border-blue)">Text</text>
+            </g>
+        </svg>
+    </a>
+<script src="JS/btn-script.js">
+</script>
+</body>
+</html>
